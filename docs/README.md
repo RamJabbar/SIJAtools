@@ -1,4 +1,4 @@
-# SIJAtools – Sistem Peminjaman Alat v2.0
+# SIJAtools – Sistem Peminjaman Alat
 
 Aplikasi desktop offline untuk manajemen peminjaman alat dengan login & role-based access control.
 
