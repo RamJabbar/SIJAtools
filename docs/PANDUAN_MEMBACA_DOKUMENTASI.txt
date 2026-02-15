@@ -1,0 +1,407 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                │
+║           📖 PANDUAN MEMBACA DOKUMENTASI SIJAtools v2.0                        │
+║                                                                                │
+║              File mana yang harus dibaca untuk apa?                            │
+║                                                                                │
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+================================================================================
+🚀 QUICK START (MULAI DARI SINI!)
+================================================================================
+
+1️⃣ JALANKAN APLIKASI LANGSUNG
+   └─ File: SIJAtools.py
+   └─ Cara: python SIJAtools.py
+   └─ Demo: admin/admin123 atau user1/user123
+
+2️⃣ BACA PENJELASAN SINGKAT (2 MENIT)
+   └─ File: RINGKASAN_MODIFIKASI.txt ← BACA INI DULU!
+   └─ Isi: Overview keseluruhan v2.0
+   └─ Cocok untuk: Quick understanding
+
+3️⃣ INGIN TAHU DETAIL PERUBAHAN?
+   └─ File: MODIFIKASI_v2.0_RINGKAS.txt
+   └─ Isi: Bagian kode yang ditambahkan (ringkas)
+   └─ Cocok untuk: Developer/code review
+
+
+================================================================================
+📚 DAFTAR FILE & KEGUNAAN MASING-MASING
+================================================================================
+
+FILE 1: RINGKASAN_MODIFIKASI.txt ⭐ BACA PERTAMA
+─────────────────────────────────────────────────
+Ukuran: ~15 KB
+Waktu Baca: 5-10 menit
+Isi:
+  ✓ Apa yang diubah di v2.0
+  ✓ Statistik perubahan
+  ✓ Access control matrix
+  ✓ Testing results
+  ✓ Demo credentials
+  ✓ File deliverables
+  ✓ Checklist lengkap
+
+TUJUAN: Memahami v2.0 secara keseluruhan dengan cepat
+
+KAPAN DIBACA:
+  - Sebelum jalankan aplikasi
+  - Untuk quick briefing
+  - Untuk presentasi project
+
+
+FILE 2: MODIFIKASI_v2.0_RINGKAS.txt ⭐ BACA KEDUA
+──────────────────────────────────────────────────
+Ukuran: ~10 KB
+Waktu Baca: 5-7 menit
+Isi:
+  ✓ Ringkasan: apa yang berubah
+  ✓ Penjelasan singkat tiap bagian kode
+  ✓ UI visual changes
+  ✓ Database perubahan
+  ✓ Line number references
+  ✓ Testing checklist
+  ✓ Not changed (preserved)
+
+TUJUAN: Lihat detail teknis tanpa terlalu dalam
+
+KAPAN DIBACA:
+  - Untuk code review singkat
+  - Developer yang ingin tahu structure
+  - Sebelum modifikasi lebih lanjut
+
+
+FILE 3: CHANGELOG_v2.0.txt (DETAIL - OPTIONAL)
+───────────────────────────────────────────────
+Ukuran: ~17 KB
+Waktu Baca: 15-20 menit (optional)
+Isi:
+  ✓ Penjelasan struktur lengkap
+  ✓ Kode snippets untuk tiap bagian
+  ✓ Alur peminjaman detail
+  ✓ Access control detail
+  ✓ Database schema lengkap
+  ✓ Backward compatibility notes
+  ✓ Security recommendations
+
+TUJUAN: Dokumentasi teknis lengkap untuk reference
+
+KAPAN DIBACA:
+  - Jika ingin modifikasi lebih lanjut
+  - Untuk production hardening
+  - Debugging/troubleshooting
+
+
+FILE 4: README.md (UPDATED - v2.0 INFO)
+────────────────────────────────────────
+Ukuran: ~3.5 KB
+Waktu Baca: 3 menit
+Isi:
+  ✓ Fitur baru v2.0
+  ✓ Quick start
+  ✓ Demo login
+  ✓ Access by role
+  ✓ Teknologi stack
+  ✓ File structure
+  ✓ Troubleshooting
+
+TUJUAN: Quick reference untuk features & usage
+
+KAPAN DIBACA:
+  - Sebelum jalankan pertama kali
+  - Cepat lihat demo credentials
+  - Troubleshooting
+
+
+FILE 5: DOKUMENTASI.txt (v1.0 - REFERENCE)
+─────────────────────────────────────────────
+Ukuran: ~17 KB
+Waktu Baca: 10-15 menit (optional)
+Isi:
+  ✓ Dokumentasi v1.0 (original)
+  ✓ Struktur aplikasi
+  ✓ Fitur-fitur v1.0
+  ✓ Cara kerja CRUD alat
+  ✓ Cara kerja peminjaman
+  ✓ Database schema v1.0
+
+TUJUAN: Reference untuk memahami fitur lama yang tetap ada
+
+KAPAN DIBACA:
+  - Jika ingin pahami fitur v1.0 detail
+  - Background reference
+
+
+FILE 6: SIJAtools.py (MAIN APPLICATION FILE)
+──────────────────────────────────────────────
+Ukuran: ~36 KB
+Bahasa: Python
+Isi:
+  ✓ DatabaseManager class (database operation)
+  ✓ LoginWindow class (login gate)
+  ✓ SIJAtoolsApp class (main UI)
+  ✓ Main program flow
+
+STRUKTUR KODE:
+  - Lines 1-50: Header & imports
+  - Lines 16-300: DatabaseManager (unchanged + login methods)
+  - Lines 316-390: LoginWindow class (NEW)
+  - Lines 393-970: SIJAtoolsApp class (modified + RBAC)
+  - Lines 970-984: Main program (modified login flow)
+
+KAPAN DIBACA:
+  - Debugging issue
+  - Code review detail
+  - Modifikasi lanjutan
+
+
+FILE 7: sijatools.db (DATABASE FILE)
+─────────────────────────────────────
+Format: SQLite 3
+Ukuran: ~28 KB
+
+TABEL:
+  1. users (NEW) - id, username, password, role, created_at
+  2. alat - id, nama_alat, stok, deskripsi, created_at
+  3. peminjaman - id, nama_peminjam, id_alat, jumlah, status, etc
+
+JANGAN EDIT MANUAL! (Edit via aplikasi atau gunakan DB Browser)
+
+KAPAN DIGUNAKAN:
+  - Otomatis dibuat saat run aplikasi
+  - Jangan dihapus kecuali mau reset
+
+
+================================================================================
+📖 MEMBACA SESUAI KEBUTUHAN
+================================================================================
+
+SKENARIO 1: INGIN LANGSUNG COBA APLIKASI
+──────────────────────────────────────────
+1. Baca: README.md (3 menit)
+2. Jalankan: python SIJAtools.py
+3. Login dengan: admin/admin123 atau user1/user123
+4. DONE!
+
+SKENARIO 2: INGIN TAHU PERUBAHAN v2.0 SECARA KESELURUHAN
+──────────────────────────────────────────────────────────
+1. Baca: RINGKASAN_MODIFIKASI.txt (5-10 menit) ⭐
+2. Baca: MODIFIKASI_v2.0_RINGKAS.txt (5-7 menit) ⭐
+3. Jalankan aplikasi & test
+4. DONE!
+
+SKENARIO 3: DEVELOPER YANG INGIN CODE REVIEW
+──────────────────────────────────────────────
+1. Baca: MODIFIKASI_v2.0_RINGKAS.txt (line numbers reference)
+2. Buka: SIJAtools.py (lihat di line numbers yang disebutkan)
+3. Baca: CHANGELOG_v2.0.txt (code snippets & detail)
+4. Test & verify database & logic
+5. DONE!
+
+SKENARIO 4: INGIN MODIFIKASI LEBIH LANJUT
+──────────────────────────────────────────
+1. Baca: CHANGELOG_v2.0.txt (lengkap)
+2. Baca: SIJAtools.py (full code)
+3. Pahami: OOP structure & flow
+4. Modifikasi & test
+5. Update documentation
+6. DONE!
+
+SKENARIO 5: PRODUCTION HARDENING/SECURITY
+───────────────────────────────────────────
+1. Baca: CHANGELOG_v2.0.txt (security notes section)
+2. Implement: Hashing, validation, logging
+3. Test: Security scenarios
+4. Deploy
+5. DONE!
+
+
+================================================================================
+⏱️ WAKTU MEMBACA ESTIMASI
+================================================================================
+
+Quick Overview (5 menit):
+└─ RINGKASAN_MODIFIKASI.txt (intro section only)
+
+Standard Review (15 menit):
+├─ RINGKASAN_MODIFIKASI.txt
+└─ MODIFIKASI_v2.0_RINGKAS.txt
+
+Thorough Review (30 menit):
+├─ RINGKASAN_MODIFIKASI.txt
+├─ MODIFIKASI_v2.0_RINGKAS.txt
+├─ CHANGELOG_v2.0.txt (sections)
+└─ README.md
+
+Complete Deep Dive (60 menit):
+├─ RINGKASAN_MODIFIKASI.txt
+├─ MODIFIKASI_v2.0_RINGKAS.txt
+├─ CHANGELOG_v2.0.txt (full)
+├─ DOKUMENTASI.txt (v1.0 reference)
+├─ README.md
+└─ SIJAtools.py (code reading)
+
+
+================================================================================
+🎯 REKOMENDASI READING ORDER
+================================================================================
+
+UNTUK PEMBACA KASUAL (Ingin cepat tahu):
+┌──────────────────────────────────────────────────────────┐
+│ 1. README.md (3 min)                                     │
+│ 2. RINGKASAN_MODIFIKASI.txt (5 min)                      │
+│ 3. Jalankan aplikasi & test                              │
+│ Total: ~10-15 menit                                      │
+└──────────────────────────────────────────────────────────┘
+
+UNTUK DEVELOPER (Ingin detail teknis):
+┌──────────────────────────────────────────────────────────┐
+│ 1. README.md (3 min)                                     │
+│ 2. RINGKASAN_MODIFIKASI.txt (5 min)                      │
+│ 3. MODIFIKASI_v2.0_RINGKAS.txt (5 min)                   │
+│ 4. CHANGELOG_v2.0.txt (10 min) - skim                   │
+│ 5. SIJAtools.py (baca code di line numbers)             │
+│ Total: ~30-40 menit                                      │
+└──────────────────────────────────────────────────────────┘
+
+UNTUK EVALUATOR/ASSESSOR (Comprehensive):
+┌──────────────────────────────────────────────────────────┐
+│ 1. RINGKASAN_MODIFIKASI.txt (10 min) - COMPLETE          │
+│ 2. MODIFIKASI_v2.0_RINGKAS.txt (7 min) - COMPLETE       │
+│ 3. CHANGELOG_v2.0.txt (15 min) - COMPLETE               │
+│ 4. README.md (3 min) - reference                         │
+│ 5. Jalankan aplikasi & test (10 min)                     │
+│ 6. Code review SIJAtools.py (20 min)                     │
+│ Total: ~60 menit THOROUGH REVIEW                         │
+└──────────────────────────────────────────────────────────┘
+
+
+================================================================================
+🔑 KEY SECTIONS UNTUK QUICK LOOKUP
+================================================================================
+
+Mau cari topik tertentu? Lihat file & line berikut:
+
+TOPIK: Login System Implementation
+└─ File: CHANGELOG_v2.0.txt, Section 4.B
+└─ File: SIJAtools.py, Lines 316-390
+
+TOPIK: Database Schema Changes
+└─ File: CHANGELOG_v2.0.txt, Section 2 & 4.A
+└─ File: SIJAtools.py, Lines 36-56
+
+TOPIK: Role-Based Access Control
+└─ File: MODIFIKASI_v2.0_RINGKAS.txt, Section "ACCESS CONTROL"
+└─ File: CHANGELOG_v2.0.txt, Section 3
+
+TOPIK: Backward Compatibility
+└─ File: CHANGELOG_v2.0.txt, Section 8
+└─ File: MODIFIKASI_v2.0_RINGKAS.txt, Section "NOT CHANGED"
+
+TOPIK: Testing & Verification
+└─ File: RINGKASAN_MODIFIKASI.txt, Section "TESTING RESULTS"
+└─ File: MODIFIKASI_v2.0_RINGKAS.txt, Section "TESTING CHECKLIST"
+
+TOPIK: Security Notes
+└─ File: CHANGELOG_v2.0.txt, Section 9
+└─ File: README.md, Section "Troubleshooting"
+
+TOPIK: Demo Credentials
+└─ File: README.md (Quick Start section)
+└─ File: RINGKASAN_MODIFIKASI.txt (Demo & Testing section)
+└─ File: MODIFIKASI_v2.0_RINGKAS.txt (Quick Start section)
+
+
+================================================================================
+❓ FAQ: FILE MANA YANG HARUS DIBACA?
+================================================================================
+
+Q: Saya ingin langsung pakai aplikasi, apa cukup baca file apa?
+A: Cukup baca README.md (3 menit), langsung jalankan aplikasi.
+
+---
+
+Q: Saya developer, mau tahu perubahan kode. File apa?
+A: Baca MODIFIKASI_v2.0_RINGKAS.txt + lihat kode di SIJAtools.py.
+
+---
+
+Q: Saya ingin dokumentasi lengkap untuk referensi.
+A: Baca CHANGELOG_v2.0.txt (lengkap & detail dengan code snippets).
+
+---
+
+Q: Saya evaluator/dosen, mau nilai project ini. Urutan baca apa?
+A: RINGKASAN_MODIFIKASI.txt → MODIFIKASI_v2.0_RINGKAS.txt → 
+   CHANGELOG_v2.0.txt → Test aplikasi → Code review.
+
+---
+
+Q: Berapa lama baca semua dokumentasi?
+A: 30-60 menit tergantung depth. Minimal 15 menit untuk overview.
+
+---
+
+Q: Data lama (v1.0) masih ada kan?
+A: Ya! Semua database lama PRESERVED. Hanya tambah tabel users.
+
+---
+
+Q: Bisa reset database?
+A: Delete sijatools.db, jalankan aplikasi ulang (auto-create).
+
+---
+
+Q: Perlu install additional library?
+A: Tidak! Hanya Python built-in (Tkinter & SQLite).
+
+
+================================================================================
+📝 CHECKLIST: SEBELUM SUBMIT PROJECT
+================================================================================
+
+□ Jalankan aplikasi: python SIJAtools.py
+□ Test login admin / admin123 → lihat tab Manajemen Alat
+□ Test login user1 / user123 → lihat tab Peminjaman
+□ Test fitur peminjaman & pengembalian
+□ Verifikasi riwayat filter by role
+□ Baca RINGKASAN_MODIFIKASI.txt
+□ Baca MODIFIKASI_v2.0_RINGKAS.txt
+□ Cek semua file ada (7 files)
+□ Double-check database tidak corrupted
+□ Siap submit!
+
+
+================================================================================
+✅ KESIMPULAN
+================================================================================
+
+Dokumentasi SIJAtools v2.0 terdiri dari:
+
+📄 QUICK READS (Untuk overview cepat):
+   └─ RINGKASAN_MODIFIKASI.txt ⭐ BACA PERTAMA
+   └─ README.md
+
+📄 TECHNICAL READS (Untuk developer):
+   └─ MODIFIKASI_v2.0_RINGKAS.txt ⭐ BACA KEDUA
+   └─ CHANGELOG_v2.0.txt (detail)
+
+📄 REFERENCE (Backup info):
+   └─ DOKUMENTASI.txt (v1.0)
+   └─ SIJAtools.py (source code)
+
+📄 DATA:
+   └─ sijatools.db (application database)
+
+Mulai dari: RINGKASAN_MODIFIKASI.txt → MODIFIKASI_v2.0_RINGKAS.txt → TEST
+
+Selamat membaca & menggunakan SIJAtools v2.0!
+
+================================================================================
+
+Dibuat: 7 Februari 2026
+Versi: SIJAtools v2.0
+Status: Production Ready ✓
+
+================================================================================
