@@ -2,7 +2,7 @@
 
 Aplikasi desktop offline untuk manajemen peminjaman alat dengan login & role-based access control.
 
-## ✨ Fitur Baru v2.0
+## ✨ Fitur
 
 - **LOGIN SYSTEM**: Username & password authentication
 - **ROLE-BASED ACCESS**: 
