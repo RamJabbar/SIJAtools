@@ -12,7 +12,7 @@ Aplikasi desktop offline untuk manajemen peminjaman alat dengan login & role-bas
 ## 🚀 Quick Start
 
 ```bash
-python SIJAtools.py
+python main.py
 ```
 
 **Demo Login:**
